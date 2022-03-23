@@ -64,7 +64,7 @@ public class TurmaDao extends Dao {
 		try {
 			
 			PreparedStatement stmt = this.conexao.prepareStatement("INSERT INTO turma (horarioInicio,horarioFim,dataInicial,dataFim,curso_id,instrutor_id,filial_id) VALUES (?,?,?,?,?,?,?);", Statement.RETURN_GENERATED_KEYS);
-			//stmt.setInt(1, turma.getId());
+			
 			stmt.setString(1, turma.getHorarioInicio());
 			stmt.setString(2, turma.getHorarioFim());
 			stmt.setString(3, turma.getDataInicial());
