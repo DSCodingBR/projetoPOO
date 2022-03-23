@@ -41,8 +41,6 @@ public class AlunoVisao {
         String estadocivil = this.jIn.nextLine();
         System.out.println("Digite a Escolaridade do Aluno:");
         String escolaridade = this.jIn.nextLine();
-        //System.out.println("Digite a Escolaridade do Aluno:");
-        //String escolaridade = this.jIn.nextLine();
 		return this.aControle.salvar(nome,mae,sexo,nascimento,email,rua,bairro,numerodacasa,cep,telefone,cidade_id,estadocivil,escolaridade);
 	}
 	public void atualizar() {

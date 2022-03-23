@@ -6,8 +6,10 @@ package Dao;
  */
 public class DaoFactory {
     
-       public static AlunoDao getAlunoDao(){
+    public static AlunoDao getAlunoDao(){
         return new AlunoDao();
     }
-       
+    public static TurmaDao getTurmaDao(){
+        return new TurmaDao();
+    }  
 }
