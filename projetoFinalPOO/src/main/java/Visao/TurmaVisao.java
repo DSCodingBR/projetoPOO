@@ -58,7 +58,7 @@ public class TurmaVisao {
                     "\nHora FIM:  " + turma.getHorarioFim()+ "\nData INICIO: " +turma.getDataInicial()
                     + "\nData FIM:  " +turma.getDataFinal()+ "\nId do Curso: " +turma.getCurso().getId()
                     +"\nNome do Curso: "+turma.getCurso().getNomeCurso()
-                    +"\nId Do INSTRUTOR:  " + turma.getInstrutor().getId()+"\nNome Filial: "+turma.getFilial().getNomeFilial());
+                    +"\nId Do INSTRUTOR:  " + turma.getInstrutor().getId()+"\nNome do Instrutor: "+ turma.getInstrutor().getNome() + "\nNome Filial: "+turma.getFilial().getNomeFilial());
         }
 	}
 	

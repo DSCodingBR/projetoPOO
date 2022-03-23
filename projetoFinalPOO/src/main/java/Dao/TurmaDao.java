@@ -8,6 +8,7 @@ import java.util.List;
 import Modelo.Curso;
 import Modelo.Filial;
 import Modelo.Instrutor;
+import Modelo.Pessoa;
 import Modelo.Turma;
 
 
@@ -16,11 +17,12 @@ public class TurmaDao extends Dao {
 		List<Turma> turmas = new ArrayList<>();
 		try {
 			
-			PreparedStatement stmt = this.conexao.prepareStatement("SELECT t.id, t.horarioInicio,t.horarioFim,t.dataInicial, t.dataFim,"
-					+ "t.curso_id, c.nomeCurso, t.instrutor_id ,f.nomeFilial "
+			PreparedStatement stmt = this.conexao.prepareStatement("SELECT t.id, t.horarioInicio, t.horarioFim, t.dataInicial, t.dataFim,"
+					+ "t.curso_id, c.nomeCurso, t.instrutor_id, p.nome as nomeInstrutor, f.nomeFilial "
 					+ "FROM turma AS t "
 					+ "INNER JOIN curso AS c ON(t.curso_id=c.id) "
 					+ "INNER JOIN instrutor AS i ON(t.instrutor_id=i.id) "
+					+ "INNER JOIN pessoa AS p ON(p.id=i.id) "
 					+ "INNER JOIN filial AS f on(t.filial_id=f.id) ORDER BY t.id ");
 		ResultSet rs = stmt.executeQuery();
 		
@@ -32,6 +34,7 @@ public class TurmaDao extends Dao {
             Instrutor instrutor = new Instrutor();
             Filial filial = new Filial();
             
+            
             turma.setId(rs.getInt("id"));
             turma.setHorarioInicio(rs.getString("horarioInicio"));
             turma.setHorarioFim(rs.getString("horarioFim"));
@@ -40,11 +43,13 @@ public class TurmaDao extends Dao {
             curso.setId(rs.getInt("curso_id"));
             curso.setNomeCurso(rs.getString("nomeCurso"));
             instrutor.setId(rs.getInt("instrutor_id"));
+            instrutor.setNome(rs.getString("nomeInstrutor"));
             filial.setNomeFilial(rs.getString("nomeFilial"));
 
             turma.setCurso(curso);
             turma.setInstrutor(instrutor);
             turma.setFilial(filial);
+            
             
             turmas.add(turma);
 		}
