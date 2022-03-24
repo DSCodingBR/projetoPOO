@@ -102,7 +102,7 @@ public class AlunoDao extends Dao {
             stmt.executeUpdate();
 			
 		}catch (Exception e) {
-			e.printStackTrace();//Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+			e.printStackTrace();
 		}
 	}
 	
@@ -121,7 +121,7 @@ public class AlunoDao extends Dao {
             stmt.executeUpdate();
             
 		}catch (Exception e) {
-			e.printStackTrace();//Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+			e.printStackTrace();
 		}
 	}
 

@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import Modelo.Aluno;
+import Modelo.Matricula;
 import Modelo.Turma;
 import Visao.AlunoVisao;
 import Visao.Main;
+import Visao.MatriculaVisao;
 import Visao.TurmaVisao;
 
 public class App {
@@ -17,6 +19,9 @@ public class App {
 		 TurmaVisao turmaVisao = new TurmaVisao();
 		 List<Turma> turmas = new ArrayList<>();
 		 
+		 MatriculaVisao matriculaVisao = new MatriculaVisao();
+		 List<Matricula> matriculas = new ArrayList<>();
+		 
 		 Scanner jIn = new Scanner(System.in);
 	     Integer opcao = null;
 	     
@@ -25,6 +30,7 @@ public class App {
 	    	 System.out.print("Digite a Opcao: ");
 	         opcao = Integer.parseInt(jIn.nextLine());
 	         switch (opcao) {
+	         
 	         	case 1:
 	            alunoVisao.salvar();
                 break;
@@ -49,6 +55,19 @@ public class App {
 	         	case 8:
 	         	turmaVisao.excluir();
 	         	break;
+	         	case 9:
+		        matriculaVisao.salvar();
+		        break;
+	         	case 10:
+	         	matriculaVisao.atualizar();
+	         	break;
+	         	case 11:
+	         	matriculaVisao.listar();
+	         	break;
+	         	case 12:
+	         	matriculaVisao.excluir();
+	         	break;
+	         	
 	         	
 	         }
 	     }while (opcao != 0);

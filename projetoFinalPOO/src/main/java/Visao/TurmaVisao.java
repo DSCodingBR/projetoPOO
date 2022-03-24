@@ -36,7 +36,7 @@ public class TurmaVisao {
 	public void atualizar() {
 		Turma t = new Turma();
 		
-		System.out.println("Digite o codigo do Turma:");
+		System.out.println("Digite o codigo da Turma:");
         t.setId(Integer.parseInt(jIn.nextLine()));
         System.out.println("Nova Hora de Inicio:");
         t.setHorarioInicio(jIn.nextLine());

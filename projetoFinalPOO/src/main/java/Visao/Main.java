@@ -11,6 +11,10 @@ public class Main {
         System.out.println("6 - Atualizar -  Turma");
         System.out.println("7 - Listar -  Turma");
         System.out.println("8 - Excluir -  Turma");
-        System.out.println("\n---------------------------\n");
+        System.out.println("9 - Salvar -  Matricula");
+        System.out.println("10 - Atualizar -  Matricula");
+        System.out.println("11 - Listar -  Matricula");
+        System.out.println("12 - Excluir -  Matricula");
+        System.out.println("\n---------------------------------\n");
     }
 }

@@ -49,6 +49,8 @@ public class AlunoVisao {
         a.setId(Integer.parseInt(jIn.nextLine()));
         System.out.println("Digite o novo nome do aluno:");
         a.setNome(jIn.nextLine());
+        System.out.println("Digite a Nova Escolaridade do Aluno:");
+        a.setEscolaridade(jIn.nextLine());
         aControle.atualizar(a);
 	}
 	public void listar(){

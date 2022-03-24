@@ -11,5 +11,8 @@ public class DaoFactory {
     }
     public static TurmaDao getTurmaDao(){
         return new TurmaDao();
-    }  
+    }
+    public static MatriculaDao getMatriculaDao(){
+        return new MatriculaDao();
+    } 
 }

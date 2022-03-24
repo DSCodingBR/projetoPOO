@@ -68,7 +68,7 @@ public class TurmaDao extends Dao {
 			stmt.setString(1, turma.getHorarioInicio());
 			stmt.setString(2, turma.getHorarioFim());
 			stmt.setString(3, turma.getDataInicial());
-			stmt.setString(4, turma.getHorarioFim());
+			stmt.setString(4, turma.getDataFinal());
 			stmt.setInt(5, turma.getCurso().getId());
 			stmt.setInt(6, turma.getInstrutor().getId());
 			stmt.setInt(7, turma.getFilial().getId());
@@ -99,7 +99,7 @@ public class TurmaDao extends Dao {
             
 			
 		}catch (Exception e) {
-			e.printStackTrace();//Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+			e.printStackTrace();
 		}
 	}
 	
@@ -109,14 +109,14 @@ public class TurmaDao extends Dao {
 			stmt.setString(1, t.getHorarioInicio());
 			stmt.setString(2, t.getHorarioFim());
 			stmt.setString(3, t.getDataInicial());
-			stmt.setString(4, t.getHorarioFim());
+			stmt.setString(4, t.getDataFinal());
 			stmt.setInt(5, t.getId());
             
             stmt.executeUpdate();
 
             
 		}catch (Exception e) {
-			e.printStackTrace();//Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+			e.printStackTrace();
 		}
 	}
 
